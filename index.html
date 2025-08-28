@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 JavaScript Fundamentals Demo Game</h1>
+        
+        <!-- Part 1: Variables, Data Types, Conditionals -->
+        <div class="game-section">
+            <h2>🎲 Number Guessing Game</h2>
+            <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div>Attempts</div>
+                    <div id="attempts">0</div>
+                </div>
+                <div class="stat-item">
+                    <div>Score</div>
+                    <div id="score">0</div>
+                </div>
+                <div class="stat-item">
+                    <div>Games Won</div>
+                    <div id="gamesWon">0</div>
+                </div>
+            </div>
+            
+            <div>
+                <input type="number" id="guessInput" placeholder="Enter your guess (1-100)" min="1" max="100">
+                <button onclick="makeGuess()">Submit Guess</button>
+                <button onclick="resetGame()">New Game</button>
+            </div>
+            
+            <div id="gameMessage" class="message hidden"></div>
+            <div id="guessHistory" class="history"></div>
+        </div>
+        
+        <!-- Part 2: Functions Demo -->
+        <div class="game-section">
+            <h2>🔧 Function Demos</h2>
+            <div>
+                <button onclick="generateRandomFacts()">Generate Random Facts</button>
+                <button onclick="calculateStats()">Calculate Game Stats</button>
+            </div>
+            <div id="functionDemo" class="message info hidden"></div>
+        </div>
+        
+        <!-- Part 3: Loops Demo -->
+        <div class="game-section">
+            <h2>🔁 Loop Demos</h2>
+            <div>
+                <button onclick="startCountdown()">Start Countdown</button>
+                <button onclick="generatePattern()">Generate Number Pattern</button>
+            </div>
+            <div id="countdownDisplay" class="countdown hidden"></div>
+            <div id="loopDemo" class="message info hidden"></div>
+        </div>
+        
+        <!-- Part 4: DOM Manipulation Demo -->
+        <div class="game-section">
+            <h2>🌐 DOM Interaction Demo</h2>
+            <div>
+                <button onclick="changeTheme()">Toggle Theme</button>
+                <button onclick="addGameElement()">Add Dynamic Element</button>
+            </div>
+            <div id="dynamicContent"></div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
