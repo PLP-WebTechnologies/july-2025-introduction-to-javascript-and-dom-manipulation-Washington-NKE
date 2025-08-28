@@ -33,19 +33,19 @@
             // Complex conditional logic
             if (guess === secretNumber) {
                 // Win condition
-                message = `🎉 Congratulations! You guessed it in ${attempts} attempts! Score: ${score}`;
+                message = ` Congratulations! You guessed it in ${attempts} attempts! Score: ${score}`;
                 messageType = "success";
                 gamesWon++;
                 isGameActive = false;
                 updateStats();
             } else if (guess < secretNumber) {
                 // Too low
-                message = "📈 Too low! Try a higher number.";
+                message = " Too low! Try a higher number.";
                 messageType = "error";
                 score = Math.max(0, score - 5); // Ternary-like operator usage
             } else {
                 // Too high  
-                message = "📉 Too high! Try a lower number.";
+                message = " Too high! Try a lower number.";
                 messageType = "error";
                 score = Math.max(0, score - 5);
             }
@@ -98,7 +98,7 @@
         // Function 3: Format statistics (helper function)
         function formatGameStats(total, avgScore, winRate) {
             return `
-                <h4>📊 Game Statistics</h4>
+                <h4> Game Statistics</h4>
                 <p><strong>Total Guesses:</strong> ${total}</p>
                 <p><strong>Games Won:</strong> ${gamesWon}</p>
                 <p><strong>Current Score:</strong> ${score}</p>
@@ -118,7 +118,7 @@
             ];
             
             const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            document.getElementById('functionDemo').innerHTML = `<h4>🤔 Random Fact:</h4><p>${randomFact}</p>`;
+            document.getElementById('functionDemo').innerHTML = `<h4> Random Fact:</h4><p>${randomFact}</p>`;
             document.getElementById('functionDemo').classList.remove('hidden');
         }
         
@@ -132,7 +132,7 @@
             
             let count = 5;
             const countdownInterval = setInterval(() => {
-                countdownDiv.textContent = count > 0 ? `Countdown: ${count}` : "🚀 GO!";
+                countdownDiv.textContent = count > 0 ? `Countdown: ${count}` : " GO!";
                 
                 if (count <= 0) {
                     clearInterval(countdownInterval);
@@ -146,7 +146,7 @@
         
         // Loop Example 2: Generate number pattern using for loop
         function generatePattern() {
-            let pattern = "<h4>🔢 Number Patterns:</h4>";
+            let pattern = "<h4> Number Patterns:</h4>";
             
             // For loop - multiplication table
             pattern += "<p><strong>Multiplication Table (5x):</strong> ";
@@ -204,7 +204,7 @@
             const newElement = document.createElement('div');
             newElement.className = 'message success';
             newElement.innerHTML = `
-                <h4>🆕 Dynamically Created Element!</h4>
+                <h4> Dynamically Created Element!</h4>
                 <p>Created at: ${new Date().toLocaleTimeString()}</p>
                 <p>Random number: ${Math.floor(Math.random() * 100)}</p>
                 <button onclick="this.parentElement.remove()">Remove This Element</button>
@@ -224,7 +224,7 @@
         
         function updateGuessHistory() {
             const historyDiv = document.getElementById('guessHistory');
-            historyDiv.innerHTML = '<h4>📝 Guess History:</h4>';
+            historyDiv.innerHTML = '<h4> Guess History:</h4>';
             
             // Use forEach to display history
             gameHistory.forEach(entry => {
